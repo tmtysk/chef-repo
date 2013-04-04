@@ -1,23 +1,14 @@
 nginx-dev Cookbook
 ==================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwhich.
+Setup and start Nginx development version with pagespeed module.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
-
-e.g.
-#### packages
-- `toaster` - nginx-dev needs toaster to brown your bagel.
+For Debian/Ubuntu OS only.
 
 Attributes
 ----------
-TODO: List you cookbook attributes here.
 
-e.g.
 #### nginx-dev::default
 <table>
   <tr>
@@ -27,9 +18,15 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['nginx-dev']['bacon']</tt></td>
+    <td><tt>['nginx']['version']</tt></td>
+    <td>String</td>
+    <td>version number</td>
+    <td><tt>1.3.15</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['nginx']['with_pagespeed']</tt></td>
     <td>Boolean</td>
-    <td>whether to include bacon</td>
+    <td>Pagespeed module will be installed if true</td>
     <td><tt>true</tt></td>
   </tr>
 </table>
@@ -37,10 +34,6 @@ e.g.
 Usage
 -----
 #### nginx-dev::default
-TODO: Write usage instructions for each cookbook.
-
-e.g.
-Just include `nginx-dev` in your node's `run_list`:
 
 ```json
 {
@@ -51,18 +44,6 @@ Just include `nginx-dev` in your node's `run_list`:
 }
 ```
 
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write you change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
-
 License and Authors
 -------------------
-Authors: TODO: List authors
+created by tmtysk, distributed under the MIT License.
